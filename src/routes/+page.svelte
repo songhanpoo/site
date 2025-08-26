@@ -4,7 +4,7 @@
 
 <Metadata
 	title="HieuNguyen"
-	description="Get to know me, Wisnu Wicaksono, through this website! I'm a passionate frontend developer and electrical engineering student, and I've poured my skills and creativity into building this site with Next.js and Tailwind CSS. Explore my interactive projects, clean portfolio, and a glimpse into my technical expertise. If you're seeking a talented developer for your next project or simply looking for inspiration, feel free to get in touch!"
+	description="Hi, I’m Hieu Nguyen! Welcome to my corner of the web. I’m a DevOps engineer and tech enthusiast who loves building clean, efficient, and creative solutions. This site, crafted with Next.js and Tailwind CSS, showcases my projects, portfolio, and technical expertise. Whether you’re looking for collaboration, inspiration, or just curious about my work, feel free to reach out!"
 />
 
 <section class="flex flex-grow flex-col items-center justify-center space-y-2.5 md:space-y-5">
