@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: postgres-db
+    restart: always
+    environment:
+      POSTGRES_USER: booodev
+      POSTGRES_PASSWORD: booodev
+      POSTGRES_DB: booodev # default database created by the image
+    command: postgres -c 'max_connections=1000'
+    # volumes:
+    #   - postgres_juice:/var/lib/postgresql/data
+    # - ./scripts/init_db:/docker-entrypoint-initdb.d # custom SQL scripts directory
+    ports:
+      - '5432:5432'
+volumes:
+  postgres_juice:
