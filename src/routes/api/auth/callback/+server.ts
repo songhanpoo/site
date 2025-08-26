@@ -1,6 +1,6 @@
 import { github } from '$lib/server/oauth';
-import { createUser, getUserFromGitHubId } from '$lib/server/db/user';
-import { createSession, generateSessionToken, setSessionTokenCookie } from '$lib/server/db/session';
+// import { createUser, getUserFromGitHubId } from '$lib/server/db/user';
+// import { createSession, generateSessionToken, setSessionTokenCookie } from '$lib/server/db/session';
 
 import type { OAuth2Tokens } from 'arctic';
 import type { RequestEvent } from './$types';
@@ -36,10 +36,10 @@ export async function GET(event: RequestEvent): Promise<Response> {
 	const username = githubUserData.login;
 
 	// 4. Check if user exists
-	const existingUser = await getUserFromGitHubId(githubUserId);
+	// const existingUser = await getUserFromGitHubId(githubUserId);
 
-	// 5. Existing user: Log them in
-	if (existingUser) return await handleSuccessfulLogin(event, existingUser.id);
+	// // 5. Existing user: Log them in
+	// if (existingUser) return await handleSuccessfulLogin(event, existingUser.id);
 
 	try {
 		const newUser = await createUser(githubUserId, username);
