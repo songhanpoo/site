@@ -61,7 +61,7 @@
 
 <!-- <svelte:head>
 	{#if !dev}
-		<script defer src="https://umami.wiscaksono.com/script.js" data-website-id={PUBLIC_UMAMI_TRACKING_ID}></script>
+		<script defer src="https://umami.songhanpoo.com/script.js" data-website-id={PUBLIC_UMAMI_TRACKING_ID}></script>
 	{/if}
 </svelte:head> -->
 

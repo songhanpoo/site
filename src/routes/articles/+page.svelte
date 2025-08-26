@@ -6,7 +6,7 @@
 </script>
 
 <Metadata
-	title="Articles | Wiscaksono"
+	title="Articles | HieuNguyen"
 	description="Discover the latest articles, delve into the world of technology, and explore the latest trends in the tech industry. Stay up-to-date with the latest news, and immerse yourself in the world of technology."
 />
 

@@ -1,4 +1,4 @@
-# Wisnu's Homepage
+# HieuNguyen's Homepage
 
 ## Preview
 
@@ -15,8 +15,8 @@
 ## Running Locally
 
 ```bash
-git clone https://github.com/wiscaksono/wiscaksono-sv
-cd wiscaksono-sv
+git clone https://github.com/songhanpoo/site
+cd site
 cp .env.example .env
 pnpm install
 pnpm dev
@@ -27,4 +27,5 @@ pnpm dev
 1. You are free to use this code as inspiration.
 2. Please do not copy it directly.
 3. Crediting the author is appreciated.
+
 # site
