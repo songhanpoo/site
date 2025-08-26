@@ -61,7 +61,7 @@
 
 <svelte:head>
 	{#if !dev}
-		<script defer src="https://umami.songhanpoo.com/script.js" data-website-id=fa72154f-d1b5-4e6b-ad7d-37050e8fb3a3></script>
+	<script defer src="https://cloud.umami.is/script.js" data-website-id="fa72154f-d1b5-4e6b-ad7d-37050e8fb3a3"></script>
 	{/if}
 </svelte:head>
 
