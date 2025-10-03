@@ -2,7 +2,7 @@
 
 ## Preview
 
-![Preview 1](./static/preview-1.png)
+![Preview 1](./static/preview-2.png)
 
 ## Stack
 

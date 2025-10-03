@@ -23,5 +23,10 @@ export const navbarMenu = [
 		title: 'articles',
 		href: '/articles',
 		key: 'r'
+	},
+	{
+		title: 'findme',
+		href: '/findme',
+		key: 'f'
 	}
 ] as const;
