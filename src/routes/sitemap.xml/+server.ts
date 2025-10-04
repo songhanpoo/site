@@ -60,30 +60,36 @@ export const GET: RequestHandler = async () => {
 	]);
 
 	const allUrlData = [
-		{
-			loc: `${BASE_URL}/`,
-			changefreq: 'yearly',
-			priority: 1.0,
-			lastmod: new Date().toISOString()
-		},
-		{
-			loc: `${BASE_URL}/projects`,
-			changefreq: 'monthly',
-			priority: 1.0,
-			lastmod: new Date().toISOString()
-		},
-		{
-			loc: `${BASE_URL}/guestbook`,
-			changefreq: 'daily',
-			priority: 1.0,
-			lastmod: new Date().toISOString()
-		},
-		{
-			loc: `${BASE_URL}/articles`,
-			changefreq: 'monthly',
-			priority: 1.0,
-			lastmod: new Date().toISOString()
-		},
+			{
+				loc: `${BASE_URL}/`,
+				changefreq: 'yearly',
+				priority: 1.0,
+				lastmod: new Date().toISOString()
+			},
+			{
+				loc: `${BASE_URL}/projects`,
+				changefreq: 'monthly',
+				priority: 1.0,
+				lastmod: new Date().toISOString()
+			},
+			{
+				loc: `${BASE_URL}/guestbook`,
+				changefreq: 'daily',
+				priority: 1.0,
+				lastmod: new Date().toISOString()
+			},
+			{
+				loc: `${BASE_URL}/articles`,
+				changefreq: 'monthly',
+				priority: 1.0,
+				lastmod: new Date().toISOString()
+			},
+			{
+				loc: `${BASE_URL}/findme`,
+				changefreq: 'monthly',
+				priority: 0.8,
+				lastmod: new Date().toISOString()
+			},
 		...articleUrlData,
 		...projectUrlData,
 		...aboutUrlData
