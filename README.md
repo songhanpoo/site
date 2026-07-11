@@ -1,14 +1,14 @@
-# Hieu Nguyen's Homepage & Portfolio 🚀
+# Hieu Nguyen's Homepage & Portfolio 
 
 A premium, interactive personal website, blog, and portfolio built with SvelteKit and Svelte 5, featuring a retro-futuristic macOS-like desktop layout.
 
-## 📸 Preview
+## Preview
 
 ![Preview 1](./static/homepage-preview.png)
 
 ---
 
-## 🛠️ The Stack
+## The Stack
 
 This application is built with modern, cutting-edge web technologies:
 
@@ -22,7 +22,7 @@ This application is built with modern, cutting-edge web technologies:
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 1.  **Interactive Desktop Interface**: The entire layout is structured inside a draggable, resizable, double-clickable window resembling a classic operating system interface (configured in [+layout.svelte](file:///Users/songhanpoo/Desktop/DEV/Nextjs/site/src/routes/+layout.svelte)).
 2.  **Noise & Particle Effects**: Includes a retro-looking canvas particle background system and a grain filter noise overlay to provide rich visual aesthetics.
@@ -86,7 +86,7 @@ Open `http://localhost:5173` in your browser.
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 Key directories and configuration files:
 *   [src/routes/](file:///Users/songhanpoo/Desktop/DEV/Nextjs/site/src/routes): SvelteKit app router (pages, APIs, layouts).
@@ -96,7 +96,7 @@ Key directories and configuration files:
 
 ---
 
-## 📄 License
+## License
 
 1. You are free to use this code as inspiration.
 2. Please do not copy it directly.
