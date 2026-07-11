@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [tailwindcss(), sveltekit()],
   server: {
     allowedHosts: [
-      "fbc2-14-169-39-182.ngrok-free.app"
+      "paulnguyen.dev"
     ]
   }
 });
