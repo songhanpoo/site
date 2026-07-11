@@ -9,6 +9,7 @@
 <Metadata
 	title="PaulNguyen"
 	description="Hi, I’m Paul Nguyen! Welcome to my blogs. I’m a DevOps engineer and tech enthusiast who loves building clean, efficient, and creative solutions. This site, crafted with Next.js and Tailwind CSS, showcases my projects, portfolio, and technical expertise. Whether you’re looking for collaboration, inspiration, or just curious about my work, feel free to reach out!"
+	image="https://paulnguyen.dev/assets/homepage-preview.png"
 />
 
 <section class="md:-p-8 flex flex-grow flex-col items-center justify-center space-y-2.5 px-4 md:space-y-5">
