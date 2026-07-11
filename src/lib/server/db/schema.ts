@@ -10,7 +10,7 @@ export type User = typeof user.$inferSelect;
 
 export const session = pgTable('session', {
 	id: text('id').primaryKey(),
-	userId: serial('user_id')
+	userId: integer('user_id')
 		.notNull()
 		.references(() => user.id, { onDelete: 'cascade' }),
 	expiresAt: timestamp('expires_at', { mode: 'date', withTimezone: true }).notNull()
@@ -29,7 +29,7 @@ export const sessionsRelations = relations(session, ({ one }) => ({
 export const guestBook = pgTable('guest_book', {
 	id: serial('id').primaryKey(),
 	content: text('content').notNull(),
-	userId: serial('user_id')
+	userId: integer('user_id')
 		.notNull()
 		.references(() => user.id, { onDelete: 'cascade' }),
 	createdAt: timestamp('created_at', { mode: 'date', withTimezone: true }).notNull()
@@ -40,10 +40,10 @@ export const guestBookRelations = relations(guestBook, ({ one }) => ({
 }));
 
 export const guestBookLike = pgTable('guest_book_like', {
-	guestBookId: serial('guest_book_id')
+	guestBookId: integer('guest_book_id')
 		.notNull()
 		.references(() => guestBook.id, { onDelete: 'cascade' }),
-	userId: serial('user_id')
+	userId: integer('user_id')
 		.notNull()
 		.references(() => user.id, { onDelete: 'cascade' })
 });

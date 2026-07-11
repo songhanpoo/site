@@ -4,9 +4,9 @@ description: Hello, I'm Wisnu Wicaksono, based in Jakarta, Indonesia. I enjoy pr
 ---
 
 ```ts
-const NAME = 'Hieu Nguyen Le Phi';
+const fullName = 'Hieu Nguyen Le Phi';
 
-const nickName = 'Paul';
+const nickName = 'Paul Nguyen';
 
 let location = 'Ho Chi Minh, Vietnamese';
 

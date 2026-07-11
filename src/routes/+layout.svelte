@@ -18,16 +18,18 @@
 
 	function toggleFullscreen() {
 		if (isMobile) return;
-		if (!isFullscreen) containerElement?.requestFullscreen();
-		else {
-			document.exitFullscreen();
+
+		isFullscreen = !isFullscreen;
+
+		// Reset position when maximizing so it aligns perfectly to the viewport
+		if (isFullscreen) {
 			position = { x: 0, y: 0 };
 		}
-		isFullscreen = !isFullscreen;
 	}
 
 	function onMouseDown(e: MouseEvent) {
-		if (isMobile) return;
+		// Prevent dragging if it's mobile or currently maximized
+		if (isMobile || isFullscreen) return;
 		dragging = true;
 		offset = { x: e.clientX - position.x, y: e.clientY - position.y };
 	}
@@ -38,38 +40,36 @@
 		const handleMouseUp = () => (dragging = false);
 
 		const handleMouseMove = (e: MouseEvent) => {
-			if (dragging) position = { x: e.clientX - offset.x, y: e.clientY - offset.y };
-		};
-
-		const handleFullscreenChange = () => {
-			if (!document.fullscreenElement) isFullscreen = false;
+			// Only allow moving if dragging and NOT maximized
+			if (dragging && !isFullscreen) {
+				position = { x: e.clientX - offset.x, y: e.clientY - offset.y };
+			}
 		};
 
 		window.addEventListener('mouseup', handleMouseUp, { signal: controller.signal });
 		window.addEventListener('mousemove', handleMouseMove, { signal: controller.signal });
-		document.addEventListener('fullscreenchange', handleFullscreenChange, { signal: controller.signal });
 
 		return () => controller.abort();
 	});
 
 	$effect(() => {
 		if (!isMobile) return;
-
 		position = { x: 0, y: 0 };
 	});
 </script>
 
 <svelte:head>
 	{#if !dev}
-	<script defer src="https://cloud.umami.is/script.js" data-website-id="fa72154f-d1b5-4e6b-ad7d-37050e8fb3a3"></script>
+		<script defer src="https://cloud.umami.is/script.js" data-website-id="fa72154f-d1b5-4e6b-ad7d-37050e8fb3a3"></script>
 	{/if}
 </svelte:head>
 
 <main
 	bind:this={containerElement}
-	class={`from-ash-800 to-ash-700 z-10 flex h-dvh w-dvw flex-col overflow-hidden bg-gradient-to-tr lg:h-[75dvh] lg:w-[70dvw] ${isFullscreen || isMobile ? 'rounded-none' : 'rounded-xl'}`}
-	class:container-shadow={!isFullscreen || !isMobile}
-	style:transform="translate({position.x}px, {position.y}px)"
+	class="from-ash-800 to-ash-700 z-10 flex h-dvh w-dvw flex-col overflow-hidden bg-gradient-to-tr
+	{isFullscreen || isMobile ? 'rounded-none lg:h-dvh lg:w-dvw' : 'rounded-xl lg:h-[75dvh] lg:w-[70dvw]'}"
+	class:container-shadow={!isFullscreen && !isMobile}
+	style:transform={isFullscreen ? 'none' : `translate(${position.x}px, ${position.y}px)`}
 	style:transition={dragging ? 'none' : 'all 0.2s ease-out'}
 >
 	<Header {isFullscreen} {onMouseDown} {toggleFullscreen} />
@@ -85,6 +85,7 @@
 {/await}
 
 <style>
+	/* Your remaining CSS stays exactly the same */
 	.grid-pattern {
 		background-image:
 			linear-gradient(to right, var(--color-ash-700) 2px, transparent 2px), linear-gradient(to bottom, var(--color-ash-700) 2px, transparent 2px);

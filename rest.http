@@ -1,0 +1,20 @@
+# Define dynamic variables at the top
+@baseUrl = https://httpbin.org
+@authToken = YourSecretBearerToken Here
+
+### Request 1: Simple GET Request
+# @name FetchingData
+GET {{baseUrl}}/get
+User-Agent: Neovim Kulala Client
+Authorization: Bearer {{authToken}}
+
+### Request 2: Send a JSON POST Payload
+# @name SubmitPayload
+POST {{baseUrl}}/post
+Content-Type: application/json
+
+{
+  "name": "Paul Nguyen",
+  "status": "Testing Kulala API Client",
+  "editor": "Neovim 0.12+"
+}

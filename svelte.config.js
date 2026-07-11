@@ -12,7 +12,7 @@ function getSingletonHighlighter() {
 	if (!highlighterPromise) {
 		highlighterPromise = createHighlighter({
 			themes: ['poimandres'],
-			langs: ['javascript', 'typescript', 'bash', 'jsx', 'tsx', 'html']
+			langs: ['javascript', 'typescript', 'bash', 'jsx', 'tsx', 'html', 'lua']
 		});
 	}
 	return highlighterPromise;
@@ -48,7 +48,13 @@ const config = {
 			rehypePlugins: [rehypeSlug]
 		})
 	],
-	kit: { adapter: adapter(), experimental: { remoteFunctions: true } },
+	kit: { 
+		adapter: adapter(), 
+		experimental: { remoteFunctions: true },
+		csrf: {
+			checkOrigin: false
+		}
+	},
 	compilerOptions: { experimental: { async: true } },
 	vitePlugin: {
 		inspector: {
