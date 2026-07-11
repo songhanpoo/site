@@ -14,6 +14,7 @@
 		"lint": "prettier --check . && eslint .",
 		"db:push": "drizzle-kit push",
 		"db:migrate": "drizzle-kit migrate",
+		"db:generate": "drizzle-kit generate --config=drizzle.config.ts",
 		"db:studio": "drizzle-kit studio"
 	},
 	"devDependencies": {
@@ -49,7 +50,8 @@
 		"postgres": "^3.4.7",
 		"rehype-slug": "^6.0.0",
 		"remark-toc": "^9.0.0",
-		"shiki": "^3.9.2"
+		"shiki": "^3.9.2",
+		"web-haptics": "^0.0.6"
 	},
 	"pnpm": {
 		"onlyBuiltDependencies": [

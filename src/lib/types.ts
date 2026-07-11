@@ -18,4 +18,6 @@ export interface Article {
 	publishedDate: string;
 	poster: string;
 	slug: string;
+	series?: string;
+	seriesPart?: number;
 }
