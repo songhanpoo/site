@@ -23,7 +23,7 @@ Key contributions included:
 - Orchestration and environment spin-up with **EKS**
 - Real-time notifications and monitoring via **Microsoft Teams** and **AWS CloudWatch**
 
-[Source Code](#) – proprietary, not public.
+**Source Code** – proprietary, not public.
 
 ## Stack
 
